@@ -5,7 +5,7 @@ const shimmer =
 export function CardSkeleton() {
   return (
     <div
-      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}
+      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-900 p-2 shadow-sm`}
     >
       <div className="flex p-4">
         <div className="h-5 w-5 rounded-md bg-gray-200" />
@@ -32,8 +32,8 @@ export function CardsSkeleton() {
 export function RevenueChartSkeleton() {
   return (
     <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
-      <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
-      <div className="rounded-xl bg-gray-100 p-4">
+      <div className="mb-4 h-8 w-36 rounded-md bg-gray-900" />
+      <div className="rounded-xl bg-gray-900 p-4">
         <div className="mt-0 grid h-[410px] grid-cols-12 items-end gap-2 rounded-md bg-white p-4 sm:grid-cols-13 md:gap-4" />
         <div className="flex items-center pb-2 pt-6">
           <div className="h-5 w-5 rounded-full bg-gray-200" />
@@ -46,15 +46,15 @@ export function RevenueChartSkeleton() {
 
 export function InvoiceSkeleton() {
   return (
-    <div className="flex flex-row items-center justify-between border-b border-gray-100 py-4">
+    <div className="flex flex-row items-center justify-between border-b border-gray-900 py-4">
       <div className="flex items-center">
-        <div className="mr-2 h-8 w-8 rounded-full bg-gray-200" />
+        <div className="mr-2 h-8 w-8 rounded-full bg-gray-900" />
         <div className="min-w-0">
-          <div className="h-5 w-40 rounded-md bg-gray-200" />
-          <div className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
+          <div className="h-5 w-40 rounded-md bg-gray-900" />
+          <div className="mt-2 h-4 w-12 rounded-md bg-gray-900" />
         </div>
       </div>
-      <div className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
+      <div className="mt-2 h-4 w-12 rounded-md bg-gray-900" />
     </div>
   );
 }
@@ -64,18 +64,28 @@ export function LatestInvoicesSkeleton() {
     <div
       className={`${shimmer} relative flex w-full flex-col overflow-hidden md:col-span-4`}
     >
-      <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
-      <div className="flex grow flex-col justify-between rounded-xl bg-gray-100 p-4">
-        <div className="bg-white px-6">
+      <div className="mb-4 h-8 w-36 rounded-md bg-gray-900" />
+      <div className="flex grow flex-col justify-between rounded-xl bg-gray-900 p-4">
+        <div className="bg-white px-6 rounded-xl">
           <InvoiceSkeleton />
           <InvoiceSkeleton />
           <InvoiceSkeleton />
           <InvoiceSkeleton />
-          <InvoiceSkeleton />
-          <div className="flex items-center pb-2 pt-6">
-            <div className="h-5 w-5 rounded-full bg-gray-200" />
-            <div className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
+          <div className="flex flex-row items-center justify-between py-4">
+            <div className="flex items-center">
+              <div className="mr-2 h-8 w-8 rounded-full bg-gray-900" />
+              <div className="min-w-0">
+                <div className="h-5 w-40 rounded-md bg-gray-900" />
+                <div className="mt-2 h-4 w-12 rounded-md bg-gray-900" />
+              </div>
+            </div>
+            <div className="mt-2 h-4 w-12 rounded-md bg-gray-900" />
           </div>
+        </div>
+        
+        <div className="flex items-center pb-2 pt-6 bg-gray-900">
+          <div className="h-5 w-5 rounded-full bg-gray-200" />
+          <div className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
         </div>
       </div>
     </div>
